@@ -48,3 +48,13 @@ class Conta:
             destino.deposita(valor)
             self.historico.transacoes.append("transferencia	de	{}	para	conta	{}".format(valor,	destino.numero))
             return True
+    
+    def	pega_saldo(self):
+		return	self._saldo
+
+    def	set_saldo(self,	saldo):
+		if(saldo < 0):
+			print("saldo não pode ser negativo")
+		else:
+			self.saldo = saldo
+
